@@ -27,6 +27,7 @@ def q():
 
     time.sleep(1);[_.destroy() for _ in h if isinstance(_,tk.Toplevel) and _.winfo_exists()]
 
+    #注意修改循环次数以防宕机
     for _ in range(sw//150*sh//40+50):
         x,y=random.randint(0,sw-150),random.randint(0,sh-40)
         w=cw(x,y,is_h=False);a.append(w);r.update();time.sleep(0.005)
